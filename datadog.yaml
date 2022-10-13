@@ -759,6 +759,8 @@ spec:
               protocol: UDP
           env:
             # Needs to be removed when Agent N-2 is built with Golang 1.17
+            - name: DD_KUBELET_TLS_VERIFY
+              value: "false"
             - name: DD_SITE
               value: us5.datadoghq.com
             - name: GODEBUG
@@ -892,6 +894,8 @@ spec:
               protocol: TCP
           env:
             # Needs to be removed when Agent N-2 is built with Golang 1.17
+            - name: DD_KUBELET_TLS_VERIFY
+              value: "false"
             - name: DD_SITE
               value: us5.datadoghq.com
             - name: GODEBUG
@@ -1114,6 +1118,8 @@ spec:
           resources: {}
           env:
             # Needs to be removed when Agent N-2 is built with Golang 1.17
+            - name: DD_KUBELET_TLS_VERIFY
+              value: "false"
             - name: DD_SITE 
               value: us5.datadoghq.com
             - name: GODEBUG
@@ -1229,6 +1235,8 @@ spec:
               subPath: system-probe.yaml
           env:
             # Needs to be removed when Agent N-2 is built with Golang 1.17
+            - name: DD_KUBELET_TLS_VERIFY
+              value: "false"
             - name: DD_SITE
               value: us5.datadoghq.com
             - name: GODEBUG
@@ -1383,6 +1391,8 @@ spec:
               name: agentmetrics
               protocol: TCP
           env:
+            - name: DD_KUBELET_TLS_VERIFY
+              value: "false"
             - name: DD_SITE
               value: us5.datadoghq.com
             - name: DD_HEALTH_PORT
